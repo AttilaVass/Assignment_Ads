@@ -158,7 +158,6 @@ public class TestSuiteFile {
                 long eventTime = opportunity.get("originalEventTime").asLong();
                 showEventTimes.computeIfAbsent(showId, k -> new ArrayList<>()).add(eventTime);
             }
-            System.out.println(showEventTimes);
         }
 
         // Identifică emisiunile difuzate săptămânal
@@ -175,7 +174,6 @@ public class TestSuiteFile {
             }
         }
 
-        System.out.println(weeklyShows);
         // Printează emisiunile săptămânale
         System.out.println("Weekly shows are:");
         for (Map.Entry<String, String> entry : weeklyShows.entrySet()) {
